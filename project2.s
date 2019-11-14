@@ -93,3 +93,22 @@ four_characters:
      beq $t3, 0, loop_findvalue        # check if the character is a null. We will ignore it if it is
 
      li $a3, 1                # initializing the value as we reach the last valid character
+
+
+ #For numbers
+     slti $t4, $t3, 58                     #anything below 58 is either a number or invalid
+     li $t5, 47
+
+     slt $t5, $t5, $t3
+     and $t5, $t5, $t4
+     addi $t0, $t3, -48            # t0 stores the actual value of the number
+     beq $t5, 1, findvalue
+
+#For Capital letters
+   slti $t4, $t3, 85             #anything below 95 are capital letters or invalid
+   li $t5, 64
+   slt $t5, $t5, $t3
+   and $t5, $t5, $t4
+   addi $t0, $t3, -55
+
+   beq $t5, 1, findvalue
