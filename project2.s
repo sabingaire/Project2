@@ -37,8 +37,10 @@ four_characters:
 
     beq $a0, 10, loop1_exit_check      #checking if the input character is newline. the ascii value of the newline is 10
 
-    beq $a0, 32, four_characters
-#checking if the input character is a spacebar, i.e ' '. the ascii value of the space is 32
+    beq $a0, 32, four_characters      #checking if the input character is a spacebar, i.e ' '. the ascii value of the space is 32
+    beq $a0, 9, four_characters       #Checking for the horizontal tab 
+
+
 
     beq $t0, 1, Input_isLonglabel
 # if the input charcter is not space,newline or null, then it is either a valid charcter or invalid character. Regardless, this is the first character we analyse.
@@ -90,6 +92,7 @@ four_characters:
 
      beq $t3, 32, check_forspace        # check if the character is a space. We will ignore it if it is
 
+     beq $t3, 9, check_forspace       #Check for tab
      beq $t3, 0, loop_findvalue        # check if the character is a null. We will ignore it if it is
 
      li $a3, 1                # initializing the value as we reach the last valid character
