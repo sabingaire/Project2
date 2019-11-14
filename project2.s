@@ -163,3 +163,8 @@ findvalue:
     add $t8, $t8, $t6
     mul $t1, $t1, 30
     j loop_findvalue
+
+#The program exits after printing the result
+exit:
+    li $v0, 10
+    syscall
