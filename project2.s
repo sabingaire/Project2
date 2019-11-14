@@ -29,3 +29,10 @@ main:
     la $a1, Maximum_store
         li $t0, 0     #Here t0 acts to check the validity of the input. It remains zero until its invalid and
                       #It changes to 1 when the input is valid
+four_characters:
+    lb $a0,($a1)                    # load the first byte the first time the loop executes and subsequent bytes after that
+    addi $a1, $a1, 1                # add 1 to the memory to loop again
+
+    beq $a0, 0, loop1_exit_check     #As ascii value of Null is 0, so checking if the input is valid or not
+
+    beq $a0, 10, loop1_exit_check      #checking if the input character is newline. the ascii value of the newline is 10
