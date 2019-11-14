@@ -168,7 +168,7 @@ check_if_loop_continues:
 findvalue:
     mul $t6, $t1, $t0
     add $t8, $t8, $t6
-    mul $t1, $t1, 30
+    mul $t1, $t1, 26
     j loop_findvalue
 
 #The program exits after printing the result
