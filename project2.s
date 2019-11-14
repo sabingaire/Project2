@@ -72,4 +72,10 @@ four_characters:
 
  loop1_exit_check:
  beq $t0, 0, emptyInputlabel         #If null characters then it is empty
- 
+
+ # Initialysing registers that holds the register
+     li $t8, 0
+     li $t1, 1
+     li $t2, 0
+
+ la $t9, Valid_store +4
