@@ -137,3 +137,10 @@ emptyInputlabel:
     la $a0, emptyInput
     syscall
     j exit
+
+#Handles invalid: string
+Input_isInvalidlabel:
+    li $v0, 4
+    la $a0, Input_isInvalid
+    syscall
+    j exit
