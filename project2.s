@@ -112,3 +112,9 @@ four_characters:
    addi $t0, $t3, -55
 
    beq $t5, 1, findvalue
+
+#For small letters
+   slti $t4, $t3, 117         #anything below 95 are capital letters or invalid
+   li $t5, 96
+   slt $t5, $t5, $t3
+   and $t5, $t5, $t4
