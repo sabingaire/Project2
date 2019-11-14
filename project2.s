@@ -45,10 +45,10 @@ four_characters:
 #Then we take that and the next three characters after it in a row and also set the value of t0  to 1.
 # If we find another non-space character after that then the input is too long.
 
-#     li $t0, 1
-# # Setting the  value to 1 as before
-#
-# # Storing the characters as we had mentioned above
-#     la $t9, Valid_store
-#     lb $a0, -1($a1)
-#     sb $a0, 0($t9)
+    li $t0, 1
+# Setting the  value to 1 as before
+
+# Storing the characters as we had mentioned above
+    la $t9, Valid_store
+    lb $a0, -1($a1)
+    sb $a0, 0($t9)
