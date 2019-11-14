@@ -1,3 +1,8 @@
+#Sabin Gaire
+#@02859054
+
+#My I.D number is 02859054. So 02859054%11 =0 will will lead to 26 base numbers
+#The last valid digit is 'p' and "P " will have value 25 respectively.
 
 .data
 #Updating the .data part where it includes the various output statements
@@ -38,7 +43,7 @@ four_characters:
     beq $a0, 10, loop1_exit_check      #checking if the input character is newline. the ascii value of the newline is 10
 
     beq $a0, 32, four_characters      #checking if the input character is a spacebar, i.e ' '. the ascii value of the space is 32
-    beq $a0, 9, four_characters       #Checking for the horizontal tab 
+    beq $a0, 9, four_characters       #Checking for the horizontal tab
 
 
 
