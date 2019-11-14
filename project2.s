@@ -122,3 +122,10 @@ four_characters:
    addi $t0, $t3, -87
    bne $t5, 1, Input_isInvalidlabel
    j findvalue
+
+#Handles long string printing invalid string
+Input_isLonglabel:
+       li $v0, 4
+       la $a0, Input_isLong
+       syscall
+       j exit
