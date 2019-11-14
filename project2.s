@@ -156,3 +156,10 @@ check_if_loop_continues:
     add $a0, $zero, $t8
     syscall
     j exit
+
+#Calculates the desired result
+findvalue:
+    mul $t6, $t1, $t0
+    add $t8, $t8, $t6
+    mul $t1, $t1, 30
+    j loop_findvalue
