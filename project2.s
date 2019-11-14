@@ -129,3 +129,11 @@ Input_isLonglabel:
        la $a0, Input_isLong
        syscall
        j exit
+
+#handles empty  string
+
+emptyInputlabel:
+    li $v0, 4
+    la $a0, emptyInput
+    syscall
+    j exit
