@@ -64,3 +64,12 @@ four_characters:
 
      lb $a0, 0($a1)
  #After this four characters are stored
+
+ sb $a0, 3($t9)
+
+ addi $a1, $a1, 1     #adding 1 to the address as we take additional characters
+ j four_characters
+
+ loop1_exit_check:
+ beq $t0, 0, emptyInputlabel         #If null characters then it is empty
+ 
