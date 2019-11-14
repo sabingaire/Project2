@@ -118,3 +118,7 @@ four_characters:
    li $t5, 96
    slt $t5, $t5, $t3
    and $t5, $t5, $t4
+
+   addi $t0, $t3, -87
+   bne $t5, 1, Input_isInvalidlabel
+   j findvalue
