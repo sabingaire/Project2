@@ -19,9 +19,13 @@ main:
     li $v0, 4 						    #Make it ready to print the instruction to console
     la $a0, input_message     #This will allow the "Choose a string method to print"
     syscall
-    
+
 #User will input their string
     li $v0, 8
     la $a0, Maximum_store
     li $a1, 2000
     syscall
+
+    la $a1, Maximum_store
+        li $t0, 0     #Here t0 acts to check the validity of the input. It remains zero until its invalid and
+                      #It changes to 1 when the input is valid
