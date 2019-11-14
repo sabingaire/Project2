@@ -113,8 +113,7 @@ four_characters:
      beq $t5, 1, findvalue
 
 #For Capital letters
-   slti $t4, $t3, 85             #anything below 95 are capital letters or invalid
-   li $t5, 64
+   slti $t4, $t3, 81             #anything below 81 are valid capital numbers as last valid is P which has value 80
    slt $t5, $t5, $t3
    and $t5, $t5, $t4
    addi $t0, $t3, -55
@@ -122,7 +121,7 @@ four_characters:
    beq $t5, 1, findvalue
 
 #For small letters
-   slti $t4, $t3, 117         #anything below 95 are capital letters or invalid
+   slti $t4, $t3, 113         #anything below 95 are smaller valid numbers as p has 112
    li $t5, 96
    slt $t5, $t5, $t3
    and $t5, $t5, $t4
