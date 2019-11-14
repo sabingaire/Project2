@@ -144,3 +144,8 @@ Input_isInvalidlabel:
     la $a0, Input_isInvalid
     syscall
     j exit
+
+#Space is not valid between characters
+check_forspace:
+    beq $a3, 1, Input_isInvalidlabel
+    j loop_findvalue            #
