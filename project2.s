@@ -52,3 +52,7 @@ four_characters:
     la $t9, Valid_store
     lb $a0, -1($a1)
     sb $a0, 0($t9)
+
+    lb $a0, 0($a1)
+    sb $a0, 1($t9)
+    addi $a1, $a1, 1    #adding 1 to the address as we take additional characters
