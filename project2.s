@@ -79,3 +79,10 @@ four_characters:
      li $t2, 0
 
  la $t9, Valid_store +4
+
+ loop_findvalue:
+     beq $t2, 4, check_if_loop_continues        #this checks if we have gone through all the values. It ends the loop
+     addi $t2, $t2, 1                    # incresing value of the loop count as we loop through the string from behind
+
+     addi $t9, $t9, -1                   #increasing the value of the address by 1.In the next loop we look at the 2nd last, then 2nd and 1st chracter
+     lb $t3, ($t9)                # loading the value of the byte to $t3
